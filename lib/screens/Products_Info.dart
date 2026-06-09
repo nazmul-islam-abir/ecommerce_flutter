@@ -1,4 +1,6 @@
+import 'package:ecommerce/screens/product.dart';
 import 'package:ecommerce/screens/product_details.dart';
+import 'package:ecommerce/screens/profileScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -71,71 +73,89 @@ class _ProductsScreenState extends State<ProductsScreen> {
 
                     const SizedBox(height: 100),
 
-                    Stack(
-                      clipBehavior: Clip.none,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.35,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                    Center(
+                      child: Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.9,
+                            height: MediaQuery.of(context).size.height * 0.35,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
-                        ),
 
-                        Positioned(
-                          top: -screenWidth * 0.40,
-                          left: screenWidth * 0.01,
-                          right: screenWidth * 0.01,
+                          Positioned(
+                            top: -screenWidth * 0.40,
+                            left: screenWidth * 0.01,
+                            right: screenWidth * 0.01,
 
-                          child: Container(
-                            height: MediaQuery.of(context).size.height * 0.5,
-                            color: const Color.fromARGB(0, 255, 99, 99),
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * 0.5,
+                              color: const Color.fromARGB(0, 255, 99, 99),
 
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Image.asset('g.png', fit: BoxFit.cover),
-                                Text(
-                                  "Single Green Sofa",
-                                  style: GoogleFonts.robotoMono(
-                                    fontSize: screenWidth * 0.055,
-                                    fontWeight: FontWeight.bold,
-                                    color: const Color.fromARGB(
-                                      255,
-                                      12,
-                                      97,
-                                      29,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    color: const Color.fromARGB(0, 255, 193, 7),
+                                    child: Image.asset(
+                                      'g.png',
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                  "Price: 5000 Tk",
-                                  style: GoogleFonts.robotoMono(
-                                    fontSize: screenWidth * 0.045,
-                                    color: const Color.fromARGB(255, 0, 0, 0),
+                                  Text(
+                                    "Single Green Sofa",
+                                    style: GoogleFonts.robotoMono(
+                                      fontSize: screenWidth * 0.055,
+                                      fontWeight: FontWeight.bold,
+                                      color: const Color.fromARGB(
+                                        255,
+                                        12,
+                                        97,
+                                        29,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ],
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "Price: 5000 Tk",
+                                    style: GoogleFonts.robotoMono(
+                                      fontSize: screenWidth * 0.045,
+                                      color: const Color.fromARGB(255, 0, 0, 0),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          bottom: -screenWidth * 0.1,
-                          left: screenWidth * 0.01,
-                          right: screenWidth * 0.01,
-                          child: Container(
-                            width: screenWidth * 0.18,
-                            height: screenWidth * 0.18,
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 0, 0, 0),
-                              shape: BoxShape.circle,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                IconButton(
+                          Positioned(
+                            bottom: -screenWidth * 0.1,
+                            left: 5,
+                            right: 5,
+                            child: SizedBox(
+                              height: 70,
+                              width: 70,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SofaDetailsPage(),
+                                    ),
+                                  );
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color.fromARGB(
+                                    255,
+                                    0,
+                                    0,
+                                    0,
+                                  ),
+                                  shape: CircleBorder(),
+                                ),
+                                child: IconButton(
                                   onPressed: () {
                                     Navigator.push(
                                       context,
@@ -146,85 +166,86 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                   },
                                   icon: Icon(
                                     CupertinoIcons.shopping_cart,
-                                    size: screenWidth * 0.1,
+                                    size: 40,
                                     color: Colors.white,
                                   ),
                                 ),
-                              ],
+                              ),
                             ),
                           ),
-                        ),
 
-                        Positioned(
-                          left: 5,
-                          right: 5,
-                          bottom: -130,
-                          child: Container(
-                            height: 60,
-                            decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 16),
-                                  child: Text(
-                                    "Shop More..",
-                                    style: TextStyle(color: Colors.white),
+                          Positioned(
+                            left: 5,
+                            right: 5,
+                            bottom: -130,
+                            child: Container(
+                              height: 60,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Padding(
+                                    padding: EdgeInsets.only(left: 16),
+                                    child: Text(
+                                      "Shop More..",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 16),
-                                  child: Row(
-                                    children: [
-                                      SizedBox(
-                                        height: 40,
-                                        width: 40,
-                                        child: const Image(
-                                          image: AssetImage("a.png"),
-                                          fit: BoxFit.cover,
+                                  Padding(
+                                    padding: const EdgeInsets.only(right: 16),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          height: 40,
+                                          width: 40,
+                                          child: const Image(
+                                            image: AssetImage("a.png"),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(width: 5),
+                                        SizedBox(width: 5),
 
-                                      SizedBox(
-                                        height: 40,
-                                        width: 40,
-                                        child: const Image(
-                                          image: AssetImage("c.webp"),
-                                          fit: BoxFit.cover,
+                                        SizedBox(
+                                          height: 40,
+                                          width: 40,
+                                          child: const Image(
+                                            image: AssetImage("c.webp"),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(width: 5),
+                                        SizedBox(width: 5),
 
-                                      SizedBox(
-                                        height: 40,
-                                        width: 40,
-                                        child: const Image(
-                                          image: AssetImage("b.webp"),
-                                          fit: BoxFit.cover,
+                                        SizedBox(
+                                          height: 40,
+                                          width: 40,
+                                          child: const Image(
+                                            image: AssetImage("b.webp"),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(width: 5),
+                                        SizedBox(width: 5),
 
-                                      SizedBox(
-                                        height: 40,
-                                        width: 40,
-                                        child: const Image(
-                                          image: AssetImage("e.png"),
-                                          fit: BoxFit.cover,
+                                        SizedBox(
+                                          height: 40,
+                                          width: 40,
+                                          child: const Image(
+                                            image: AssetImage("e.png"),
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -235,14 +256,39 @@ class _ProductsScreenState extends State<ProductsScreen> {
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.green,
           unselectedItemColor: Colors.grey,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.circle_outlined),
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ProductPage()),
+                  );
+                },
+                child: const Icon(Icons.home),
+              ),
               label: "",
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ""),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.circle_outlined),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.favorite),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ProfileScreen()),
+                  );
+                },
+                child: const Icon(Icons.person),
+              ),
+              label: "",
+            ),
           ],
         ),
       ),

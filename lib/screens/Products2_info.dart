@@ -1,5 +1,7 @@
+import 'package:ecommerce/screens/product.dart';
 import 'package:ecommerce/screens/product_details.dart';
 import 'package:ecommerce/screens/product_details2.dart';
+import 'package:ecommerce/screens/profileScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -234,17 +236,42 @@ class _ProductsScreenState extends State<ProductsScreen2> {
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
+       bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.green,
           unselectedItemColor: Colors.grey,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.circle_outlined),
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ProductPage()),
+                  );
+                },
+                child: const Icon(Icons.home),
+              ),
               label: "",
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite), label: ""),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: ""),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.circle_outlined),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.favorite),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              icon: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ProfileScreen()),
+                  );
+                },
+                child: const Icon(Icons.person),
+              ),
+              label: "",
+            ),
           ],
         ),
       ),
