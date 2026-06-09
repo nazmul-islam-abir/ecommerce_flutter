@@ -52,13 +52,13 @@
 
 ### Sorting
 <div>
-  <img src="assets/ss/3.png" alt="Sorting 3" style="width:48%; margin-right:2%;" />
-  <img src="assets/ss/4.png" alt="Sorting 4" style="width:48%;" />
+  <img src="assets/ss/3.png" alt="Sorting 3" style="width:30%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/4.png" alt="Sorting 4" style="width:30%; height:auto;" />
 </div>
 
 ### Searching
 <div>
-  <img src="assets/ss/2.png" alt="Searching 2" style="width:48%; margin-right:2%;" />
-  <img src="assets/ss/5.png" alt="Searching 5" style="width:48%;" />
+  <img src="assets/ss/2.png" alt="Searching 2" style="width:30%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/5.png" alt="Searching 5" style="width:30%; height:auto;" />
 </div>
 
