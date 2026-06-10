@@ -62,7 +62,7 @@
 
 <div>
   <img src="assets/ss/14.png" alt="Confirm payment 14" style="width:35%; margin-right:2%; height:auto;" />
-  <img src="assets/ss/15.png" alt="Redirect order page 15" style="width:35%; height:auto;" />
+  <img src="assets/ss/19.png" alt="Redirect order page 15" style="width:35%; height:auto;" />
 </div>
 
 
