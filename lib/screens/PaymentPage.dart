@@ -17,7 +17,7 @@ class _PaymentPageState extends State<PaymentPage> {
   final TextEditingController numberController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
 
-  final List<String> address_Info =[];
+  final List<String> address_Info = [];
 
   void add_Adress() {
     if (nameController.text.trim().isEmpty ||
@@ -26,8 +26,8 @@ class _PaymentPageState extends State<PaymentPage> {
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title:  Text('Missing information'),
-          content:  Text(
+          title: Text('Missing information'),
+          content: Text(
             'Please fill in name, phone number, and address before adding.',
           ),
           actions: [
@@ -59,6 +59,9 @@ class _PaymentPageState extends State<PaymentPage> {
     setState(() {
       address_Info.removeAt(index);
     });
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Long pressed. Item removed.')),
+    );
   }
 
   void show_snackbar(String address_Info) {
@@ -387,7 +390,7 @@ class _PaymentPageState extends State<PaymentPage> {
         ),
 
         // 💰 PAY BUTTON
-       bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.green,
           unselectedItemColor: Colors.grey,
           items: [

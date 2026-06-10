@@ -1,5 +1,74 @@
+
+## Screenshots
+
+### Profile and Splash
+
+<div>
+  <img src="assets/ss/16.png" alt="Profile 16" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/1.png" alt="Splash 1" style="width:18%; height:auto;" />
+</div>
+
+
+### Sorting
+
+<div>
+  <img src="assets/ss/3.png" alt="Sorting 3" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/4.png" alt="Sorting 4" style="width:18%; height:auto;" />
+</div>
+
+### Searching
+
+<div>
+  <img src="assets/ss/2.png" alt="Searching 2" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/5.png" alt="Searching 5" style="width:18%; height:auto;" />
+</div>
+
+### Product Info
+
+<div>
+  <img src="assets/ss/6.png" alt="Product Info 6" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/7.png" alt="Product Info 7" style="width:18%; height:auto;" />
+</div>
+
+### Product Details Info
+
+<div>
+  <img src="assets/ss/8.png" alt="Product Details Info 8" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/17.png" alt="Product Details Info 17" style="width:18%; height:auto;" />
+</div>
+
+### Chat with Seller
+
+<div>
+  <img src="assets/ss/9.png" alt="Chat with Seller 9" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/10.png" alt="Chat with Seller 10" style="width:18%; height:auto;" />
+</div>
+
+### Payment Information
+
+<div>
+  <img src="assets/ss/12.png" alt="Payment Information 12" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/14.png" alt="Payment Information 14" style="width:18%; height:auto;" />
+</div>
+
+### Tap to view, long press to delete
+
+<div>
+  <img src="assets/ss/13.png" alt="Tap to view 13" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/18.png" alt="Long press to delete 18" style="width:18%; height:auto;" />
+</div>
+
+### Confirm payment redirect to order page
+
+<div>
+  <img src="assets/ss/14.png" alt="Confirm payment 14" style="width:18%; margin-right:2%; height:auto;" />
+  <img src="assets/ss/15.png" alt="Redirect order page 15" style="width:18%; height:auto;" />
+</div>
+
+
+
 # SofaNest E-commerce Flutter App
-- All Features Added:
+# All Features Added:
 - Splash screen on app start
 - Home / Product page ("SofaNest" branding)
 - Responsive layout using MediaQuery for sizing
@@ -47,18 +116,4 @@
     - profileScreen.dart
     - orderlist.dart
     - PaymentPage.dart
-
-## Screenshots
-
-### Sorting
-<div>
-  <img src="assets/ss/3.png" alt="Sorting 3" style="width:30%; margin-right:2%; height:auto;" />
-  <img src="assets/ss/4.png" alt="Sorting 4" style="width:30%; height:auto;" />
-</div>
-
-### Searching
-<div>
-  <img src="assets/ss/2.png" alt="Searching 2" style="width:30%; margin-right:2%; height:auto;" />
-  <img src="assets/ss/5.png" alt="Searching 5" style="width:30%; height:auto;" />
-</div>
 
